@@ -1,0 +1,24 @@
+﻿<Window x:Class="WPF_DB.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_DB"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Login" Height="300" Width="300">
+    <Border Background="Black" CornerRadius="40" Margin="20">
+        <StackPanel Margin="10">
+            <TextBlock Text="Login" FontSize="32" HorizontalAlignment="Center" Foreground="White"/>
+            <Separator/>
+            <TextBlock Text="Name:" FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtName" Text="{Binding Path=Login, Mode=TwoWay}"/>
+            <TextBlock Text="Password: " FontWeight="Bold" Foreground="White"/>
+            <TextBox x:Name="txtPassword" Text="{Binding Path=Login, Mode=TwoWay}"/>
+            <StackPanel Margin="20" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnSubmit" Margin="10 0" Padding="10 0" Content="Submit" Click="btnSubmit_Click"/>
+                <Button x:Name="btnRegister" Margin="10 0" Padding="10 0" Content="Register" Click="btnRegister_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Border>
+</Window>
